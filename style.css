@@ -1,0 +1,83 @@
+@font-face {
+    font-family: BodoniBook;
+    src: url("assets/bodoni-book.otf") format("opentype");
+    font-style: normal;
+    font-weight: book;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div {
+    outline: solid 1px red;
+    margin: 0;
+    padding: 0;
+}
+
+div.header {
+    margin: 0 auto;
+    padding: 0 !important; 
+    background-image: url("assets/header2.png");
+    background-position: center;
+    height: 867px;
+    width: 100%;
+    max-width: 2000px;
+}
+
+div.title {
+    margin: 0 auto;
+    padding-top: 200px;
+    width: 910px;
+    color: #fcf9f6;
+}
+
+div.title>h1 {
+    padding: 0;
+    margin: 0;
+    font-family: BodoniBook;
+    font-style: normal;
+    font-weight: book;
+    font-size: 95px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 140px;
+}
+
+div.title>h1::first-letter {
+    font-size: 176px;
+}
+
+div.title>h2 {
+    padding: 0;
+    margin: 0;
+    margin-top: -50px;
+    font-family: 'Inria Sans';
+    font-weight: regular;
+    color: #fcf9f6;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: normal;s
+}
+
+div.sections {
+    margin: 0 auto;
+    padding: 0;
+    width: 910px;
+    height: 100%;
+}
+
+div.sections>div.menu {
+    margin: 0 auto;
+    margin-left: -200px;
+    position: relative;
+    height: 0px;
+    width: 0px;
+    overflow:visible;
+}
+
+div.sections>div.menu>ul {
+    position: fixed;
+    top: 700px;
+}
