@@ -15,7 +15,7 @@ div {
 div.header {
     margin: 0 auto;
     padding: 0 !important; 
-    background: none;
+    background-color: white;
     background-image: url("assets/header2.png");
     background-position: center;
     height: 867px;
