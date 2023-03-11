@@ -63,6 +63,13 @@ div.sections {
 }
 
 div.sections>*{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+div.sections>div>div {
     width: 910px;
     margin: 0 auto;
 }
