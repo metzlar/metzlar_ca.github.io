@@ -83,7 +83,7 @@ div.sections p:last-of-type {
 
 .contactSection,
 .experienceSection {
-    background-color: grey;
+    background-color: #fbf9f7;
 }
 
 div.sections>.divider {
@@ -107,7 +107,7 @@ div.sections>.divider {
 }
 
 div.sections>div.menu {
-    margin: 0 auto;
+    /*margin: 0 auto;
     margin-left: -200px;
     position: relative;
     height: 0px;
@@ -119,6 +119,7 @@ div.sections>div.menu {
     text-transform: uppercase;
     font-size: 26pt;
     line-height: 32px;
+    */
 }
 
 div.sections>div.menu a:link,
