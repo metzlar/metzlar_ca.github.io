@@ -76,8 +76,9 @@ div.sections>div>div {
     margin: 0 auto;
 }
 
-div.sections>div>div:last-child {
-    margin: 0;
+.contactSection,
+.experienceSection {
+    background-color: grey;
 }
 
 div.sections>.divider {
