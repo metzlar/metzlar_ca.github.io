@@ -76,6 +76,8 @@ div.sections h2 {
     font-size: 26px;
     font-family: 'Inria Sans';
     line-height: 34px;
+    padding: 0;
+    margin: 0;
 }
 
 div.sections>*{
@@ -217,6 +219,7 @@ div.sections>div.menu ul {
 div.sections>div>div>a>img {
     padding: 0;
     margin:0;
+    margin-bottom: -55px;
 }
 
 
