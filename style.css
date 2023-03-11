@@ -195,7 +195,15 @@ div.sections>div.menu ul {
     display: inline-block;
 }
 
-
+.h-line {
+    margin: 5px;
+    padding: 0;
+    font-size: 0%;
+    overflow: hidden;
+    width: 2px;
+    height: 20px;
+    display: inline-block;
+}
 
 
 /*
