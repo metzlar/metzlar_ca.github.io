@@ -95,11 +95,11 @@ div.sections *:last-of-type
     background-color: #fbf9f7;
 }
 
-div.skillsLeft,
+/* div.skillsLeft,
 div.skillsRight
 {
     width: 455px;
-}
+} */
 
 div.sections>.divider {
     width: 100%;
