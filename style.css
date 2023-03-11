@@ -95,16 +95,16 @@ div.sections *:last-of-type
     background-color: #fbf9f7;
 }
 
-div.row {
+/* div.row {
     width: 100%;
     max-width: 910px;
     display: flex;
-}
+} */
 
 div.skillsLeft,
 div.skillsRight
 {
-    flex: 50%;
+    width: 455px;
 }
 
 div.sections>.divider {
