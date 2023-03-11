@@ -69,15 +69,15 @@ div.sections>*{
     padding: 0;
     width: 100%;
     max-width: 2000px;
-    padding-bottom: 0px !important;
-    margin-bottom: 0px !important;
 }
 
 div.sections>div>div {
     width: 910px;
     margin: 0 auto;
-    padding-bottom: 0px !important;
-    margin-bottom: 0px !important;
+}
+
+div.sections p:last-of-type {
+    margin: 0;
 }
 
 .contactSection,
