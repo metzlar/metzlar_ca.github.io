@@ -28,6 +28,7 @@ div.title {
     padding-top: 200px;
     width: 910px;
     color: #fcf9f6;
+    background: none;
 }
 
 div.title>h1 {
@@ -64,6 +65,7 @@ div.sections {
     width: 100%;
     height: 100%;
     min-height: 100%;
+    background: none;
 }
 
 div.sections>*{
