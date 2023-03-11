@@ -78,6 +78,7 @@ div.sections>div>div {
 
 div.sections p:last-of-type {
     margin: 0;
+    margin-bottom: 0px !important;
 }
 
 .contactSection,
