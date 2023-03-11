@@ -113,13 +113,13 @@ div.sections>div.menu {
     height: 0px;
     width: 0px;
     overflow: visible;
+    */
     color: rgba(23, 13, 4, 0.7);
     font-family: 'Inria Sans';
     font-weight: bold;
     text-transform: uppercase;
     font-size: 26pt;
     line-height: 32px;
-    */
 }
 
 div.sections>div.menu a:link,
