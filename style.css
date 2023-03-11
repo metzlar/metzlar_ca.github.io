@@ -107,13 +107,6 @@ div.skillsRight
     flex: 50%;
 }
 
-div.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
 div.sections>.divider {
     width: 100%;
     height: 210px;
