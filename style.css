@@ -89,8 +89,8 @@ div.sections>div.menu a:hover,
 div.sections>div.menu a:active
 {
     text-decoration: none;
-    color: inherit;
-    background-color: inherit;
+    color: rgba(23, 13, 4, 0.7);
+    background-color: none;
 }
 
 div.sections>div.menu>ul {
