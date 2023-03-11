@@ -74,7 +74,7 @@ div.sections>div.menu {
     position: relative;
     height: 0px;
     width: 0px;
-    overflow:visible;
+    overflow: visible;
     color: rgba(23, 13, 4, 0.7);
     font-family: 'Inria Sans';
     font-weight: bold;
@@ -83,13 +83,21 @@ div.sections>div.menu {
     line-height: 32px;
 }
 
+div.sections>div.menu a {
+
+}
+
 div.sections>div.menu>ul {
     position: fixed;
     top: 700px;
 }
 
-.orange-bg .orange {
+.orange {
     color: rgba(243, 125, 22, 0.85);
+}
+
+.orange.bg {
+    background-color: rgba(243, 125, 22, 0.85);
 }
 
 .menu-line {
@@ -100,3 +108,12 @@ div.sections>div.menu>ul {
     width: 2px;
     height: 20px;
 }
+
+
+
+
+/*
+bottom
+*/
+
+
