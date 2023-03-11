@@ -111,8 +111,9 @@ div.sections>div.menu {
     margin-left: -200px;
     position: relative;
     */
+    margin: 0 auto;
     height: 0px;
-    width: 0px;
+    width: 910px;
     overflow: visible;
     color: rgba(23, 13, 4, 0.7);
     font-family: 'Inria Sans';
