@@ -96,14 +96,14 @@ div.sections *:last-of-type
 }
 
 div.row {
-    width: 910px;
+    width: 100%;
+    display: flex;
 }
 
 div.skillsLeft,
 div.skillsRight
 {
-    float:left;
-    width: 50%;
+    flex: 50%;
 }
 
 div.row:after {
