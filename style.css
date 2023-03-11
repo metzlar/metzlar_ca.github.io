@@ -187,8 +187,8 @@ div.sections>div.menu ul {
 
 .menu-line {
     margin: 0;
-    padding: 0;
-    margin-right: -100px;
+    padding: 5px;
+    font-size: 0%;
     overflow: hidden;
     width: 2px;
     height: 20px;
