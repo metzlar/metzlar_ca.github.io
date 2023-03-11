@@ -80,13 +80,18 @@ div.sections>div>div {
     margin: 0 auto;
 }
 
-div.sections p:last-of-type {
+div.sections p:last-of-type,
+div.sections li:last-of-type
+{
     margin: 0;
     margin-bottom: 0px !important;
 }
 
 .contactSection,
-.experienceSection {
+.experienceSection,
+.contactSection *,
+.experienceSection * 
+{
     background-color: #fbf9f7;
 }
 
