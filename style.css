@@ -95,6 +95,13 @@ div.sections *:last-of-type
     background-color: #fbf9f7;
 }
 
+div.skillsLeft,
+div.skillsRight
+{
+    float:left;
+    width: 50%;
+}
+
 div.sections>.divider {
     width: 100%;
     height: 210px;
