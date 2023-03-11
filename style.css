@@ -110,10 +110,10 @@ div.sections>div.menu {
     /*margin: 0 auto;
     margin-left: -200px;
     position: relative;
+    */
     height: 0px;
     width: 0px;
     overflow: visible;
-    */
     color: rgba(23, 13, 4, 0.7);
     font-family: 'Inria Sans';
     font-weight: bold;
