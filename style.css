@@ -53,8 +53,7 @@ div.title>h1::first-letter {
 div.title>h2 {
     padding: 0;
     margin: 0;
-    margin-bottom: 64px;
-    margin-top: -50px;
+    margin-bottom: 86px;
     font-family: 'Inria Serif';
     font-weight: regular;
     color: #fcf9f6;
