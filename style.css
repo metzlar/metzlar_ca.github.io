@@ -83,8 +83,14 @@ div.sections>div.menu {
     line-height: 32px;
 }
 
-div.sections>div.menu a {
-
+div.sections>div.menu a:link,
+div.sections>div.menu a:visited,
+div.sections>div.menu a:hover,
+div.sections>div.menu a:active
+{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
 }
 
 div.sections>div.menu>ul {
