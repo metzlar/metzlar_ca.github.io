@@ -29,7 +29,7 @@ div.title {
 div.title>h1 {
     padding: 0;
     margin: 0;
-    font-family: 'Inria Sans';
+    font-family: 'Inria Serif';
     font-style: normal;
     font-weight: book;
     font-size: 95px;
@@ -46,7 +46,7 @@ div.title>h2 {
     padding: 0;
     margin: 0;
     margin-top: -50px;
-    font-family: 'Inria Sans';
+    font-family: 'Inria Serif';
     font-weight: regular;
     color: #fcf9f6;
     font-size: 32px;
