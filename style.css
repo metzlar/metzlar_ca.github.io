@@ -97,6 +97,7 @@ div.sections *:last-of-type
 
 div.row {
     width: 100%;
+    max-width: 910px;
     display: flex;
 }
 
