@@ -98,6 +98,13 @@ div.skillsLeft,
 div.skillsRight
 {
     width: 455px;
+    float: left;
+}
+
+div.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 div.sections>.divider {
