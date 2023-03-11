@@ -75,9 +75,28 @@ div.sections>div.menu {
     height: 0px;
     width: 0px;
     overflow:visible;
+    color: rgba(23, 13, 4, 0.7);
+    font-family: 'Inria Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 26pt;
+    line-height: 32px;
 }
 
 div.sections>div.menu>ul {
     position: fixed;
     top: 700px;
+}
+
+.orange-bg .orange {
+    color: rgba(243, 125, 22, 0.85);
+}
+
+.menu-line {
+    margin: 0;
+    padding: 0;
+    margin-right: -100px;
+    overflow: hidden;
+    width: 2px;
+    height: 20px;
 }
