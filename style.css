@@ -95,12 +95,23 @@ div.sections *:last-of-type
     background-color: #fbf9f7;
 }
 
+div.row {
+    width: 910px;
+}
+
 div.skillsLeft,
 div.skillsRight
 {
     float:left;
     width: 50%;
 }
+
+div.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
 div.sections>.divider {
     width: 100%;
