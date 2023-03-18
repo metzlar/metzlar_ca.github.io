@@ -4,6 +4,7 @@
 <head>
     <title>Ivan Metzlar - Software Engineer</title>
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <script>
         var head = document.head;
         var link = document.createElement("link");
@@ -12,11 +13,35 @@
         link.rel = "stylesheet";
         link.href = "style.css?version=" + Date.now();
 
-        head.appendChild(link);
+      head.appendChild(link);
+
+      function isHidden(el) {
+	  var style = window.getComputedStyle(el);
+	  return (style.visibility === 'hidden')
+      }
+      
+      function toggleMenu() {
+	  var options = document.getElementsByClassName("options")[0];
+	  var hamburger = document.getElementsByClassName("hamburger")[0];
+
+	  if (isHidden(hamburger)) return;
+
+	  if (isHidden(options)) {
+	      options.style.visibility = "visible";
+	      hamburger.style.backgroundImage = "url('assets/x_icon.svg')";
+	  } else {
+	      options.style.visibility = "hidden";
+	      hamburger.style.backgroundImage = "url('assets/hamburger_menu.svg')";
+	  }
+      }
     </script>
 </head>
 
 <body>
+  <div class="hamburger" onclick="toggleMenu()">
+    <a href="javascript:">Toggle Menu</a>
+  </div>
+
     <div class="header">
         <div class="title">
             <h1>Ivan</h1>
@@ -26,97 +51,114 @@
     </div>
 
     <div class="sections">
-        <div class="menu">
-            <ul>
-                <li><a href="#about"><span class="orange">|</span> 1. About</a></li>
-                <li><a href="#experience"><span class="orange">|</span> 2. Experience</a></li>
-                <li><a href="#skills"><span class="orange">|</span> 3. Skills</a></li>
-                <li><a href="#contact"><span class="orange">|</span> 4. Contact</a></li>
-            </ul>
+      <div class="menu">
+	<div class="options" onclick="toggleMenu()">
+                <ul>
+                    <li><a href="#about"><span class="menu-line orange bg">|</span> About</a></li>
+                    <li><a href="#experience"><span class="menu-line orange bg">|</span> Experience</a></li>
+                    <li><a href="#skills"><span class="menu-line orange bg">|</span> Skills</a></li>
+                    <li><a href="#contact"><span class="menu-line orange bg">|</span> Contact</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="aboutSection">
-            <a id="about">&nbsp;</a>
-            <h2>About</h2>
-            <p>
-                My name is Ivan Metzlar, I am a passionate Software Engineer
-                interested in continuous integration, test driven development,
-                monitoring, high availability, scaling, cloud computing, distributed
-                systems, batch processing, streaming analytics, big data, machine
-                learning and data warehouses.
-            </p>
-            <p>
-                I am currently located in British Columbia, Canada. I help companies
-                worldwide streamline data pipelines, design data platforms and build
-                data engineering teams. I enjoy working on complex systems from the
-                ground up as well as existing systems with demanding requirements.
-            </p>
-            <hr />
+            <div>
+                <a id="about"><img src="assets/about_icon.svg"/></a>
+                <h2><span class="h-line orange bg">|</span> About</h2>
+                <p>
+                    My name is Ivan Metzlar, I am a Software Engineer
+                    interested in continuous integration, test driven development,
+                    monitoring, high availability, scaling, cloud computing, distributed
+                    systems, batch processing, streaming analytics, big data, machine
+                    learning and data warehouses.
+                </p>
+                <p>
+                    I am currently located in British Columbia, Canada. I help companies
+                    worldwide streamline data pipelines, design data platforms and build
+                    data engineering teams. I work on complex systems from the
+                    ground up as well as existing systems with demanding requirements.
+                </p>
+            </div>
         </div>
+        <div class="divider divider1"></div>
         <div class="experienceSection">
-            <a id="experience">&nbsp;</a>
-            <h2>Experience</h2>
-            <p>
-                I have built data platforms and helped scale existing data
-                platforms. I have merged multiple warehouses from multiple
-                companies. I have separated batch processing from real-time
-                analytics. I have setup machine learning workflows for data
-                scientists and enabled BI analysts with more flexibility when
-                working with data.
-            </p>
-            <hr />
+            <div>
+                <a id="experience"><img src="assets/experience_icon.svg"/></a>
+                <h2><span class="h-line orange bg">|</span> Experience</h2>
+                <p>
+                    I have built data platforms and helped scale existing data
+                    platforms. I have merged multiple warehouses from multiple
+                    companies. I have separated batch processing from real-time
+                    analytics. I have setup machine learning workflows for data
+                    scientists and enabled BI analysts with more flexibility when
+                    working with their data. I have designed and implemented multi
+		    tenancy Airflow environments.
+                </p>
+            </div>
         </div>
+        <div class="divider divider2"></div>
         <div class="skillsSection">
-            <a id="skills">&nbsp;</a>
-            <h2>Skills</h2>
-            <p>
-                I have 15+ years of experience using various tools and programming
-                languages. The lists below show some that were used in recent
-                projects.
-            </p>
-            <div class="skillsLeft">
-                <h3>Tools & Frameworks:</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>Make</li>
-                    <li>Airflow</li>
-                    <li>Jupyter</li>
-                    <li>Django</li>
-                    <li>Flask</li>
-                    <li>Boto</li>
-                    <li>Sqlalchemy</li>
-                    <li>Pytest</li>
-                    <li>Pylint</li>
-                    <li>Black</li>
-                    <li>Sqlfluff</li>
-                    <li>Typescript</li>
-                </ul>
+            <div>
+                <a id="skills"><img src="assets/skills_icon.svg"/></a>
+                <h2><span class="h-line orange bg">|</span> Skills</h2>
+                <p>
+                    I have 15+ years of experience using various tools and programming
+                    languages. The lists below show some that were used in recent
+                    projects.
+                </p>
+                <div class="row">
+                    <div class="skillsLeft">
+                        <h3>Tools & Frameworks:</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Make</li>
+                            <li>Airflow</li>
+			    <li>Great Expectations</li>
+                            <li>Jupyter</li>
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>Boto</li>
+                            <li>Sqlalchemy</li>
+                            <li>Pytest</li>
+                            <li>Pylint</li>
+                            <li>Black</li>
+                            <li>Sqlfluff</li>
+                            <li>Typescript</li>
+                        </ul>
+                    </div>
+                    <div class="skillsRight">
+                        <h3>Software & Clouds:</h3>
+                        <ul>
+                          <li>AWS (Cloudformation, CDK)
+			    <ul>
+                              <li>MWAA</li>
+                              <li>Lambda</li>
+                              <li>Athena</li>
+                              <li>ECS</li>
+			    </ul>
+			  </li>
+                            <li>Snowflake</li>
+                            <li>Postgres</li>
+                            <li>Docker</li>
+                            <li>GitHub</li>
+                            <li>Jira</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            
-            <div class="skillsRight">
-                <h3>Software & Clouds:</h3>
-                <ul>
-                    <li>AWS (Cloudformation, CDK)</li>
-                    <li>MWAA</li>
-                    <li>Lambda</li>
-                    <li>Athena</li>
-                    <li>ECS</li>
-                    <li>Snowflake</li>
-                    <li>Postgres</li>
-                    <li>Docker</li>
-                    <li>GitHub</li>
-                    <li>Jira</li>
-                </ul>
-            </div>
-            <hr />
         </div>
+        <div class="divider divider3"></div>
         <div class="contactSection">
-            <a id="contact">&nbsp;</a>
-            <h2>Contact</h2>
-            <p>metzlar@gmail.com</p>
-            <p>github.com/metzlar</p>
-            <hr />
+            <div>
+                <a id="contact"><img src="assets/contact_icon.svg"/></a>
+                <h2><span class="h-line orange bg">|</span> Contact</h2>
+                <p>metzlar@gmail.com</p>
+                <p>github.com/metzlar</p>
+            </div>
         </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
     </div>
 
 

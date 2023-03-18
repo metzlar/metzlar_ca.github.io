@@ -1,24 +1,24 @@
-@font-face {
-    font-family: BodoniBook;
-    src: url("assets/bodoni-book.otf") format("opentype");
-    font-style: normal;
-    font-weight: book;
-}
-
+html,
 body {
     margin: 0 !important;
     padding: 0 !important;
+    background-color: black;
+    font-size: 24px;
+    font-family: 'Inria Sans';
+    line-height: 34px;
 }
 
 div {
-    outline: solid 1px red;
+    /*outline: solid 1px red;*/
     margin: 0;
     padding: 0;
+    background-color:white;
 }
 
 div.header {
     margin: 0 auto;
     padding: 0 !important; 
+    background-color: white;
     background-image: url("assets/header2.png");
     background-position: center;
     height: 867px;
@@ -28,15 +28,19 @@ div.header {
 
 div.title {
     margin: 0 auto;
-    padding-top: 200px;
-    width: 910px;
+    padding: 0;
+    padding-top: 210px;
+    padding-right: 120px;
+    width: 100%;
+    max-width: 910px;
     color: #fcf9f6;
+    background: none;
 }
 
 div.title>h1 {
     padding: 0;
     margin: 0;
-    font-family: BodoniBook;
+    font-family: 'Inria Serif';
     font-style: normal;
     font-weight: book;
     font-size: 95px;
@@ -52,51 +56,264 @@ div.title>h1::first-letter {
 div.title>h2 {
     padding: 0;
     margin: 0;
-    margin-top: -50px;
-    font-family: 'Inria Sans';
+    margin-top: -20px;
+    padding-left: 5px;
+    font-family: 'Inria Serif';
     font-weight: regular;
     color: #fcf9f6;
     font-size: 32px;
     line-height: 32px;
-    letter-spacing: normal;s
+    letter-spacing: normal;
 }
 
 div.sections {
     margin: 0 auto;
     padding: 0;
-    width: 910px;
+    width: 100%;
     height: 100%;
+    min-height: 100%;
+    background: none;
+}
+
+div.sections h2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: 'Inria Sans';
+    line-height: 34px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 22px;
+    margin-top: 26px;
+}
+
+div.sections>*{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+div.sections>div>div {
+    widht: 100%;
+    max-width: 910px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    div.sections>div>div {
+	widht: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+    }
+}
+
+
+/*div.sections p:last-of-type*/
+div.sections *:last-of-type
+{
+    margin-bottom: 0px !important;
+}
+
+.contactSection,
+.experienceSection,
+.contactSection *,
+.experienceSection * 
+{
+    background-color: #fbf9f7;
+}
+
+div.skillsLeft,
+div.skillsRight
+{
+    width: 455px;
+    float: left;
+}
+
+div.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.sections>.divider {
+    width: 100%;
+    height: 210px;
+    max-width: 2000px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.divider1 {
+    background-image: url('assets/divider-1.svg');
+}
+
+.divider2 {
+    background-image: url('assets/divider-2.svg');
+}
+
+.divider3 {
+    background-image: url('assets/divider-3.svg');
 }
 
 div.sections>div.menu {
-    margin: 0 auto;
-    margin-left: -200px;
-    position: relative;
+    margin: 0 auto !important;
+    position: relative;    
+    height: 0px;
+    width: 100%;
+    max-width: 910px;
+    overflow: visible;
+    background: none;
+    visibility: show;
+    z-index: auto;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+}
+
+div.sections>div.menu>div.options {
+    margin: 0;
+    padding: 0;
+    margin-left: -250px;
+    overflow: visible;
     height: 0px;
     width: 0px;
-    overflow:visible;
+}
+
+div.hamburger {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    visibility: hidden;
+    background: none;
+    background-image: url('assets/hamburger_menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.hamburger>a {
+    padding: 0;
+    margin: 0;
+    widht: 100%;
+    height: 100%;
+}
+
+
+
+div.sections>div.menu a:link,
+div.sections>div.menu a:visited,
+div.sections>div.menu a:hover,
+div.sections>div.menu a:active
+{
+    text-decoration: none;
+    color: rgba(23, 13, 4, 0.7);
+    background-color: none;
+}
+
+div.sections>div.menu ul {
+    position: fixed;
+    top: 765px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     color: rgba(23, 13, 4, 0.7);
     font-family: 'Inria Sans';
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 26pt;
+    font-size: 26px;
     line-height: 32px;
 }
 
-div.sections>div.menu>ul {
-    position: fixed;
-    top: 700px;
+@media only screen and (max-width: 1400px) {
+    div.sections>div.menu>div.options {
+	margin-left: -200px;
+    }
+    div.sections>div.menu ul {
+	font-size: 24px;
+    }
 }
 
-.orange-bg .orange {
+@media only screen and (max-width: 1024px) {
+    div.sections>div.menu {
+	margin: 0 !important;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	top: 0px;
+	right: 0px;
+	z-index: 1000;
+	visibility: hidden;
+    }
+
+    div.sections>div.menu>div.options {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+    }
+
+    div.hamburger {
+	position: fixed;
+	top: 18px;
+	right: 18px;
+	visibility: visible;
+	z-index: 1001;
+    }
+
+    
+    div.sections>div.menu ul {
+	position: absolute;
+	top: 0px;
+    }
+
+}
+
+.orange {
     color: rgba(243, 125, 22, 0.85);
 }
 
+.orange.bg {
+    background-color: rgba(243, 125, 22, 0.85);
+}
+
 .menu-line {
-    margin: 0;
+    margin: 5px;
     padding: 0;
-    margin-right: -100px;
+    font-size: 0%;
     overflow: hidden;
     width: 2px;
     height: 20px;
+    display: inline-block;
 }
+
+.h-line {
+    margin: 5px;
+    margin-right: 2px;
+    margin-left: 3px;
+    margin-top: 0px;
+    padding: 0;
+    font-size: 0%;
+    overflow: hidden;
+    width: 2px;
+    height: 20px;
+    display: inline-block;
+}
+
+div.sections>div>div>a>img {
+    padding: 0;
+    margin:0;
+    margin-bottom: 0px;
+}
+
+
+/*
+bottom
+*/
+
+
