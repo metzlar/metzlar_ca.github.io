@@ -170,13 +170,12 @@ div.sections>div.menu {
     right: inherit;
 }
 
-div.sections>div.menu>c {
-    margin: 0;
-    padding: 0;
-    margin-left: -250px;
+div.sections>div.menu>div.options {
+    position: fixed;
+    left: 50%;
     overflow: visible;
-    height: 0px;
-    width: 0px;
+    top: 765px;
+    background: none;
 }
 
 div.hamburger {
@@ -216,8 +215,8 @@ div.sections>div.menu a:active
 }
 
 div.sections>div.menu ul {
-    position: fixed;
-    top: 765px;
+    position: relative;
+    top: 0px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -227,6 +226,7 @@ div.sections>div.menu ul {
     text-transform: uppercase;
     font-size: 26px;
     line-height: 32px;
+    left: -800px;
 }
 
 @media only screen and (max-width: 1400px) {
