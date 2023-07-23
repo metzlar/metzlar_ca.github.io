@@ -8,6 +8,21 @@ body {
     line-height: 34px;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration: none;
+    color: rgba(23, 13, 4, 0.7);
+    background-color: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(243, 125, 22, 0.85);
+}
+
 div {
     /*outline: solid 1px red;*/
     margin: 0;

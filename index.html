@@ -16,24 +16,63 @@
       head.appendChild(link);
 
       function isHidden(el) {
-	  var style = window.getComputedStyle(el);
-	  return (style.visibility === 'hidden')
+        var style = window.getComputedStyle(el);
+        return (style.visibility === 'hidden')
       }
       
       function toggleMenu() {
-	  var options = document.getElementsByClassName("options")[0];
-	  var hamburger = document.getElementsByClassName("hamburger")[0];
+        var options = document.getElementsByClassName("options")[0];
+        var hamburger = document.getElementsByClassName("hamburger")[0];
 
-	  if (isHidden(hamburger)) return;
+        if (isHidden(hamburger)) return;
 
-	  if (isHidden(options)) {
-	      options.style.visibility = "visible";
-	      hamburger.style.backgroundImage = "url('assets/x_icon.svg')";
-	  } else {
-	      options.style.visibility = "hidden";
-	      hamburger.style.backgroundImage = "url('assets/hamburger_menu.svg')";
-	  }
+        if (isHidden(options)) {
+            options.style.visibility = "visible";
+            hamburger.style.backgroundImage = "url('assets/x_icon.svg')";
+        } else {
+            options.style.visibility = "hidden";
+            hamburger.style.backgroundImage = "url('assets/hamburger_menu.svg')";
+        }
       }
+
+      
+      addEventListener("resize", function(event){
+        
+        var windowHeight = window.innerHeight;
+        var windowWidth = window.innerWidth;
+
+        if(windowWidth < 1024) return;
+
+        var options = document.getElementsByClassName("options")[0];
+
+        options.style.top = `${Math.min(windowHeight - 200, 765)}px`;
+
+        window.dispatchEvent(new Event('scroll'));
+      });
+      
+
+      addEventListener("scroll", function(event){
+
+        var windowWidth = window.innerWidth;
+
+        if(windowWidth < 1024) return;
+
+        var options = document.getElementsByClassName("options")[0];
+        
+        var optionsRect = options.getBoundingClientRect();
+
+        var scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+
+        if(optionsRect.top + scrollHeight < 765) {
+            options.style.top = `${765 - scrollHeight}px`;
+        }
+
+      });
+      
     </script>
 </head>
 
@@ -129,7 +168,7 @@
                             <li>Pylint</li>
                             <li>Black</li>
                             <li>Sqlfluff</li>
-                            <li>Typescript</li>
+                          <li>Typescript</li>
                         </ul>
                     </div>
                     <div class="skillsRight">
@@ -158,8 +197,9 @@
             <div>
                 <a id="contact"><img src="assets/contact_icon.svg"/></a>
                 <h2><span class="h-line orange bg">|</span> Contact</h2>
-                <p>metzlar@gmail.com</p>
-                <p>github.com/metzlar</p>
+                <p><a href="mailto:metzlar@gmail.com"><img src="assets/envelope_icon.svg"/>metzlar@gmail.com</a></p>
+                <p><a href="https://github.com/metzlar"><img src="assets/github_icon.svg"/>github.com/metzlar</a></p>
+                <p><a href="https://www.linkedin.com/in/ivan-metzlar-b34865a1"><img src="assets/linkedin_icon.svg"/>https://www.linkedin.com/in/ivan-metzlar-b34865a1</a></p>
             </div>
         </div>
         <div>&nbsp;</div>
@@ -167,6 +207,10 @@
     </div>
 
 
+    <script>
+
+        window.dispatchEvent(new Event('resize'));
+    </script>
 </body>
 
 </html>
